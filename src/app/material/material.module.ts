@@ -7,6 +7,7 @@ import { MatDividerModule} from '@angular/material/divider';
 import { MatSidenavModule} from '@angular/material/sidenav';
 import { MatButtonModule } from '@angular/material/button';
 import { AppRoutingModule } from '../app-routing.module';
+import { MatListModule} from '@angular/material/list';
 
 @NgModule({
   declarations: [],
@@ -18,7 +19,8 @@ import { AppRoutingModule } from '../app-routing.module';
     MatDividerModule,
     MatSidenavModule,
     MatButtonModule,
-    AppRoutingModule
+    AppRoutingModule,
+    MatListModule
   ], exports: [
     MatToolbarModule,
     MatIconModule,
@@ -26,7 +28,8 @@ import { AppRoutingModule } from '../app-routing.module';
     MatDividerModule,
     MatSidenavModule,
     MatButtonModule,
-    AppRoutingModule
+    AppRoutingModule,
+    MatListModule
   ]
 })
 export class MaterialModule { }

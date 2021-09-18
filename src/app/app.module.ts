@@ -13,8 +13,11 @@ import { RouterModule, Routes } from '@angular/router';
 const appRoutes: Routes = [
   {path: 'buscar', component: BuscarComponent},
   {path: 'editar', component: EditarComponent},
-  {path: 'registro', component: RegistroComponent}
+  {path: 'registro', component: RegistroComponent},
+  {path: '**', redirectTo: '/', pathMatch: 'full' }
 ];
+
+
 
 @NgModule({
   declarations: [
