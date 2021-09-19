@@ -9,6 +9,7 @@ import { MatButtonModule } from '@angular/material/button';
 import { AppRoutingModule } from '../app-routing.module';
 import { MatListModule} from '@angular/material/list';
 import { MatTableModule} from '@angular/material/table';
+import { MatProgressBarModule} from '@angular/material/progress-bar';
 
 @NgModule({
   declarations: [],
@@ -22,7 +23,8 @@ import { MatTableModule} from '@angular/material/table';
     MatButtonModule,
     AppRoutingModule,
     MatListModule,
-    MatTableModule
+    MatTableModule,
+    MatProgressBarModule
   ], exports: [
     MatToolbarModule,
     MatIconModule,
@@ -32,7 +34,8 @@ import { MatTableModule} from '@angular/material/table';
     MatButtonModule,
     AppRoutingModule,
     MatListModule,
-    MatTableModule
+    MatTableModule,
+    MatProgressBarModule
   ]
 })
 export class MaterialModule { }

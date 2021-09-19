@@ -11,6 +11,8 @@ export class AppComponent implements OnInit {
   
   isExpanded: boolean = false;
 
+  isLoading = true;
+
   ngOnInit(): void{
   }
 }

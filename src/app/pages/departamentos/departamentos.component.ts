@@ -11,7 +11,7 @@ import { DepartamentosService } from 'src/app/_service/departamentos.service';
 export class DepartamentosComponent implements OnInit {
 
   ELEMENT_DATA: Departamento[] = [];
-  displayedColumns: string[] = ['idDepartamento', 'nombre'];
+  displayedColumns: string[] = ['idDepartamento', 'nombre', 'getdetails'];
   dataSource = new MatTableDataSource<Departamento>(this.ELEMENT_DATA);
 
   constructor(private service: DepartamentosService) { }
@@ -25,6 +25,12 @@ export class DepartamentosComponent implements OnInit {
   public getAllDepartamentos(){
     let resp = this.service.departamentosreport();
     resp.subscribe(report => this.dataSource.data = report as Departamento[]);
+  }
+
+  // getRecordCiudades
+  // tslint:disable-next-line: typedef
+  getRecordCiudades(){
+    alert('prueba');
   }
 
 }
