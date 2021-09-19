@@ -9,6 +9,8 @@ import { BuscarComponent } from './pages/buscar/buscar.component';
 import { EditarComponent } from './pages/editar/editar.component';
 import { RegistroComponent } from './pages/registro/registro.component';
 import { RouterModule, Routes } from '@angular/router';
+import { DepartamentosComponent } from './pages/departamentos/departamentos.component';
+import { HttpClientModule } from '@angular/common/http';
 
 const appRoutes: Routes = [
   {path: 'buscar', component: BuscarComponent},
@@ -17,21 +19,21 @@ const appRoutes: Routes = [
   {path: '**', redirectTo: '/', pathMatch: 'full' }
 ];
 
-
-
 @NgModule({
   declarations: [
     AppComponent,
     BuscarComponent,
     EditarComponent,
-    RegistroComponent
+    RegistroComponent,
+    DepartamentosComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
     MaterialModule,
-    RouterModule.forRoot(appRoutes)
+    RouterModule.forRoot(appRoutes),
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

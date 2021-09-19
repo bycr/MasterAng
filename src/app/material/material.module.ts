@@ -8,6 +8,7 @@ import { MatSidenavModule} from '@angular/material/sidenav';
 import { MatButtonModule } from '@angular/material/button';
 import { AppRoutingModule } from '../app-routing.module';
 import { MatListModule} from '@angular/material/list';
+import { MatTableModule} from '@angular/material/table';
 
 @NgModule({
   declarations: [],
@@ -20,7 +21,8 @@ import { MatListModule} from '@angular/material/list';
     MatSidenavModule,
     MatButtonModule,
     AppRoutingModule,
-    MatListModule
+    MatListModule,
+    MatTableModule
   ], exports: [
     MatToolbarModule,
     MatIconModule,
@@ -29,7 +31,8 @@ import { MatListModule} from '@angular/material/list';
     MatSidenavModule,
     MatButtonModule,
     AppRoutingModule,
-    MatListModule
+    MatListModule,
+    MatTableModule
   ]
 })
 export class MaterialModule { }
