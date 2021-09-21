@@ -13,6 +13,7 @@ export class DepartamentosComponent implements OnInit {
   ELEMENT_DATA: Departamento[] = [];
   displayedColumns: string[] = ['idDepartamento', 'nombre', 'getdetails'];
   dataSource = new MatTableDataSource<Departamento>(this.ELEMENT_DATA);
+  isLoading = false;
 
   constructor(private service: DepartamentosService) { }
 
@@ -33,4 +34,17 @@ export class DepartamentosComponent implements OnInit {
     alert('prueba');
   }
 
+  // tslint:disable-next-line: typedef
+  /*cargadatos(){
+    this.isLoading = true;
+
+    setTimeout(() => {
+      this.dataSource = this.ELEMENT_DATA((item) => {
+        console.log(Math.floor(item.weight));
+        return Math.floor(item.weight) > 10;
+      });
+      this.isLoading = false;
+    }, 2000);
+  }
+  */
 }

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { RouteConfigLoadEnd, RouteConfigLoadStart, Router, RouterEvent } from '@angular/router';
 
 @Component({
   selector: 'app-root',
@@ -6,13 +7,19 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 
+export class AppComponent implements OnInit { 
+  isExpanded = false;
 
-export class AppComponent implements OnInit {
-  
-  isExpanded: boolean = false;
-
-  isLoading = true;
+  progresbar = false;
+  // tslint:disable-next-line: typedef
+  loadData(){
+    this.progresbar = true;
+    setTimeout(() =>{
+      this.progresbar = false;
+    }, 1000);
+  }
 
   ngOnInit(): void{
   }
+
 }
